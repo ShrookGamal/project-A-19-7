@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">تفاصيل المقال | إيبرا مودرن</title>
+    <!-- الخطوط الملكية -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --p-blue: #3A9BDC;
+            --navy: #0d1b2a;
+            --grey: #4A4E51;
+            --light-bg: #f8fafc;
+            --amiri: 'Amiri', serif;
+            --cairo: 'Cairo', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #fff; color: var(--grey); font-family: var(--cairo); overflow-x: hidden; }
+
+        /* --- شريط تقدم القراءة --- */
+        .progress-container { position: fixed; top: 0; z-index: 2000; width: 100%; height: 5px; background: transparent; }
+        .progress-bar { height: 5px; background: var(--p-blue); width: 0%; box-shadow: 0 0 10px var(--p-blue); }
+
+        /* --- الهيدر الزجاجي --- */
+        header { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 15px 5%; display: flex; justify-content: center; transition: 0.4s; }
+        .nav-glass { 
+            width: 100%; max-width: 1200px; height: 70px; background: rgba(255, 255, 255, 0.9); 
+            backdrop-filter: blur(15px); border-radius: 20px; display: flex; justify-content: space-between; 
+            align-items: center; padding: 0 30px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .logo-back { display: flex; align-items: center; gap: 15px; text-decoration: none; }
+        .logo-back img { height: 45px; }
+        .back-btn { background: var(--p-blue); color: #fff; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: 0.3s; }
+        .back-btn:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(58, 155, 220, 0.3); }
+
+        /* --- قسم العنوان الرئيسي (Hero) --- */
+        .article-hero { position: relative; height: 70vh; background: var(--navy); display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; overflow: hidden; padding-top: 80px; }
+        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(13,27,42,0.6), var(--navy)); z-index: 1; }
+        .hero-img-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.5; transform: scale(1.1); animation: slowZoom 20s infinite alternate; }
+        @keyframes slowZoom { to { transform: scale(1); } }
+        
+        .hero-content { position: relative; z-index: 2; max-width: 1000px; padding: 0 20px; }
+        .article-tag { background: var(--p-blue); padding: 5px 20px; border-radius: 50px; font-weight: 900; font-size: 0.9rem; margin-bottom: 20px; display: inline-block; }
+        .main-article-title { font-family: var(--amiri); font-size: 4rem; line-height: 1.2; font-weight: 700; margin-bottom: 20px; opacity: 0; transform: translateY(30px); animation: fadeInUp 1s forwards 0.5s; }
+        .article-meta { font-size: 1.1rem; color: #ccc; display: flex; justify-content: center; gap: 30px; opacity: 0; animation: fadeInUp 1s forwards 0.8s; }
+
+        /* --- محتوى المقال --- */
+        .content-wrapper { max-width: 900px; margin: -100px auto 100px; background: #fff; padding: 80px; border-radius: 50px; position: relative; z-index: 5; box-shadow: 0 50px 100px rgba(0,0,0,0.08); border: 1px solid #f1f5f9; }
+        .article-body { font-size: 1.35rem; line-height: 2.2; color: #333; text-align: justify; }
+        .article-body h2 { font-family: var(--amiri); color: var(--navy); font-size: 2.8rem; margin: 50px 0 20px; border-right: 5px solid var(--p-blue); padding-right: 20px; line-height: 1.2; }
+        .article-body p { margin-bottom: 30px; }
+        .article-body ul { margin-bottom: 30px; padding-right: 40px; }
+        .article-body li { margin-bottom: 15px; color: var(--grey); position: relative; list-style: none; }
+        .article-body li::before { content: '✔'; position: absolute; right: -30px; color: var(--p-blue); font-weight: 900; }
+
+        /* --- الفوتر والدعوة للتواصل --- */
+        .cta-box { background: var(--light-bg); padding: 50px; border-radius: 40px; border: 2px dashed var(--p-blue); text-align: center; margin-top: 80px; }
+        .cta-box h3 { font-family: var(--amiri); font-size: 2.5rem; color: var(--navy); margin-bottom: 15px; }
+        .cta-btn { background: var(--p-blue); color: #fff; padding: 15px 40px; border-radius: 15px; text-decoration: none; font-weight: 900; font-size: 1.2rem; display: inline-flex; align-items: center; gap: 10px; margin-top: 20px; transition: 0.3s; }
+        .cta-btn:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(58, 155, 220, 0.4); }
+
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .content-wrapper { padding: 40px 20px; margin-top: -50px; border-radius: 30px; }
+            .main-article-title { font-size: 2.2rem; }
+            .article-body h2 { font-size: 1.8rem; }
+            .article-hero { height: 60vh; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="progress-container"><div class="progress-bar" id="readingProgress"></div></div>
+
+    <header>
+        <div class="nav-glass">
+            <a href="index.html" class="logo-back">
+                <img src="https://i.postimg.cc/85M0f1Wv/logo.png" alt="Ibra Modern">
+                <span style="font-family: var(--amiri); font-size: 1.5rem; color: var(--navy); font-weight: 900;">إيبرا مودرن</span>
+            </a>
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a>
+        </div>
+    </header>
+
+    <main id="article-section">
+        <section class="article-hero">
+            <img src="" id="hero-img" class="hero-img-bg">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="article-tag" id="art-tag">فئة المقال</div>
+                <h1 class="main-article-title" id="art-title">جاري تحميل المحتوى...</h1>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar-alt"></i> <span id="art-date"></span></span>
+                    <span><i class="far fa-clock"></i> وقت القراءة: 10 دقائق</span>
+                    <span><i class="far fa-user"></i> فريق التحرير</span>
+                </div>
+            </div>
+        </section>
+
+        <article class="content-wrapper">
+            <div class="article-body" id="art-content">
+                <!-- المحتوى الضخم يظهر هنا -->
+            </div>
+
+            <div class="cta-box">
+                <h3>هل أنت مستعد لتجربة نظافة تفوق الخيال؟</h3>
+                <p>دع فريق إيبرا مودرن يعتني بمنشأتك وفق أعلى المعايير العالمية.</p>
+                <a href="tel:+966560704020" class="cta-btn"><i class="fas fa-phone-alt"></i> احجز معاينة مجانية الآن</a>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        // داتا المقالات الست الضخمة (SEO Optimized)
+        const blogDatabase = {
+            "pool": {
+                tag: "صيانة خارجية",
+                title: "7 خطوات أساسية في تنظيف مسابح الفلل لضمان مياه نقية وصحية في 2026",
+                date: "12 يناير 2026",
+                img: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=1000",
+                content: `
+                    <p>المسابح الفاخرة في الفلل والقصور ليست مجرد إضافة جمالية، بل هي واحة للراحة النفسية والرفاهية الصحية. ومع ذلك، فإن إهمال التنظيف الدوري قد يحول هذه الواحة إلى بؤرة للبكتيريا والطحالب.</p>
+                    <h2>1. فحص التوازن الكيميائي الدقيق</h2>
+                    <p>نبدأ في إيبرا مودرن باستخدام أجهزة رقمية متطورة لقياس مستويات الكلور والرقم الهيدروجيني (pH). التوازن المثالي يمنع تهيج العين والجلد ويحفظ جودة المعدات من التآكل الكيميائي على المدى الطويل.</p>
+                    <h2>2. نظام الكنس المائي العميق</h2>
+                    <p>باستخدام المكانس الآلية الذكية، نقوم بشفط الرواسب الرملية والأتربة المجهرية من قاع المسبح والزوايا الضيقة التي لا تصل إليها الأدوات التقليدية، مما يضمن صفاءً كريستالياً للمياه.</p>
+                    <h2>3. صيانة الفلاتر والمضخات</h2>
+                    <p>الفلتر هو قلب المسبح النابض. نقوم بعملية "Backwash" دورية وتنظيف فلاتر الرمل أو الكارتريدج لضمان تدفق مياه قوي ونقي طوال الوقت.</p>
+                    <ul>
+                        <li>استخدام منظفات صديقة للبيئة لا تضر بجلود الأطفال.</li>
+                        <li>إزالة الطحالب من الجدران بتقنيات الفرش الماسية.</li>
+                        <li>تعقيم المياه بالأوزون لتقليل الحاجة للكلور الكيميائي.</li>
+                    </ul>
+                    <p>إن التزامنا في إيبرا مودرن يتعدى مجرد التنظيف؛ نحن نهتم بصحة عائلتكم ونوفر لكم مياهاً مطابقة لمعايير المسابح العالمية الفاخرة.</p>
+                `
+            },
+            "garden": {
+                tag: "لاندسكيب",
+                title: "5 أفكار مبتكرة في تنسيق حدائق الفلل لتحويلها إلى واحة استرخاء خاصة",
+                date: "05 فبراير 2026",
+                img: "images/blog2.jpg",
+                content: `
+                    <p>حديقة الفيلا هي أول ما يراه الزائر، وهي المكان الذي تقضي فيه العائلة أجمل أوقاتها. لذا، فإن تنسيقها يحتاج إلى رؤية فنية وخبرة هندسية واسعة.</p>
+                    <h2>1. دمج أنظمة الري الذكية (IoT)</h2>
+                    <p>في عام 2026، لم يعد الري مجرد خرطوم مياه. نحن نركب أنظمة ري مرتبطة بحساسات الرطوبة وتطبيقات الجوال، مما يضمن سقاية كل نبتة بالكمية التي تحتاجها فقط، ويوفر في استهلاك المياه.</p>
+                    <h2>2. الإضاءة الليلية الساحرة</h2>
+                    <p>تصميم نظام إضاءة (Spotlights) يبرز جمال الأشجار والممرات المائية ليلاً، مما يعطي الحديقة طابعاً درامياً وفخماً في المساء.</p>
+                    <h2>3. اختيار النباتات المستدامة</h2>
+                    <p>نحرص على اختيار أنواع من الزهور والأشجار التي تتناسب مع مناخ المنطقة وتبقى خضراء طوال العام، مع توفير عقود صيانة دورية للتقليم والتسميد العضوي.</p>
+                `
+            },
+            "majlis": {
+                tag: "عناية داخلية",
+                title: "6 أخطاء شائعة في تنظيف مجالس الضيوف تدمر الأقمشة الحريرية وكيفية تجنبها",
+                date: "18 مارس 2026",
+                img: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1000",
+                content: `
+                    <p>المجالس هي قلب الضيافة العربية، وغالباً ما تُصنع من أفخر أنواع الأقمشة مثل الحرير والمخمل والجلود الطبيعية. التنظيف الخاطئ قد يتسبب في بهتان الألوان أو تلف الأنسجة.</p>
+                    <h2>1. تجنب المنظفات الكيميائية القاسية</h2>
+                    <p>استخدام "الصابون العادي" قد يترك بقعاً دهنية تجذب الأتربة أكثر. نحن نستخدم رغوة جافة (Dry Foam) مخصصة لكل نوع قماش على حدة.</p>
+                    <h2>2. قوة البخار الجاف</h2>
+                    <p>تقنية البخار الجاف تصل لعمق 15 سم داخل قماش المجالس لتقتل الجراثيم وتزيل الروائح الكريهة دون أن تترك القماش مبللاً لفترات طويلة.</p>
+                    <h2>3. التعقيم ضد مسببات الحساسية</h2>
+                    <p>نقوم بشفط عث الغبار والمواد المسببة للحساسية باستخدام مكانس مزودة بفلاتر HEPA لضمان جلسة مريحة وصحية لضيوفكم.</p>
+                `
+            },
+            "marble": {
+                tag: "تلميع ومعالجة",
+                title: "5 مراحل احترافية في جلي وتلميع رخام منزلك ليعود كأنه جديد تماماً",
+                date: "22 أبريل 2026",
+                img: "images/blog4.webp",
+                content: `
+                    <p>الرخام مادة حية تتنفس، وبمرور الوقت تفقد بريقها بسبب الخدوش والعوامل الجوية. عملية الجلي هي "عملية تجميل" شاملة للأرضيات الفاخرة.</p>
+                    <h2>1. الجلي بالأقراص الماسية (Diamond Grinding)</h2>
+                    <p>نبدأ بإزالة الطبقة التالفة والخدوش العميقة باستخدام أقراص الماس الصلبة، مما يعيد السطح لمستواه الأصلي الموحد.</p>
+                    <h2>2. معالجة الثقوب والشقوق</h2>
+                    <p>استخدام مادة "الجولي" الملونة بنفس درجة الرخام لملء أي شقوق، مما يجعل الأرضية تبدو وكأنها قطعة واحدة عملاقة من الرخام.</p>
+                    <h2>3. التلميع الكريستالي الإيطالي</h2>
+                    <p>هذه هي المرحلة النهائية حيث نستخدم مساحيق تلميع تتفاعل مع جزيئات الرخام لتعطيه طبقة حماية زجاجية تلمع كالماس وتعكس الإضاءة بشكل باهر.</p>
+                `
+            },
+            "carpet": {
+                tag: "تطهير عميق",
+                title: "6 نصائح ذهبية في تنظيف سجاد وموكيت منزلك للحفاظ على ألوانه ورونقه",
+                date: "10 مايو 2026",
+                img: "images/OIP.webp",
+                content: `
+                    <p>السجاد الفاخر هو لوحة فنية أرضية، لكنه أيضاً أكبر مجمع للأتربة والبكتيريا في المنزل. الحفاظ عليه يتطلب أكثر من مجرد كنس يومي.</p>
+                    <h2>1. التنظيف بالاستخلاص المائي</h2>
+                    <p>نستخدم أجهزة ضخ الماء الساخن مع الشفط القوي، مما يسحب الأوساخ من جذور الألياف وليس فقط السطح.</p>
+                    <h2>2. الحماية من البهتان</h2>
+                    <p>استخدام مواد تثبيت الألوان (Color Stabilizers) تضمن بقاء السجاد مشرقاً وكأنه جديد حتى بعد عمليات غسيل متعددة.</p>
+                    <h2>3. التجفيف السريع</h2>
+                    <p>نستخدم مراوح تجفيف صناعية ضخمة تنهي عملية التجفيف في ساعات معدودة، مما يمنع تكون أي روائح رطوبة أو عفن داخل الألياف.</p>
+                `
+            },
+            "smart": {
+                tag: "إدارة ذكية",
+                title: "مستقبل إدارة المرافق 2026: كيف ترفع النظافة الذكية من القيمة السوقية لعقارك؟",
+                date: "30 يونيو 2026",
+                img: "images/contact.png",
+                content: `
+                    <p>في إيبرا مودرن، نحن نؤمن بأن العقار هو أصل استثماري يجب الحفاظ عليه. الإدارة الذكية للمرافق هي التي تفرق بين مبنى يتهالك ومبنى تزداد قيمته سنوياً.</p>
+                    <h2>1. الصيانة الوقائية بالبيانات</h2>
+                    <p>نستخدم تطبيقات رقمية لمتابعة حالة كل مرفق، مما يسمح لنا بإجراء الصيانة قبل وقوع العطل، وهذا يوفر 30% من تكاليف الإصلاح الكبرى.</p>
+                    <h2>2. النظافة المستدامة (Green Cleaning)</h2>
+                    <p>استخدام مواد حاصلة على شهادات LEED العالمية يجعل مبناك "صديقاً للبيئة"، وهو ما يبحث عنه كبار المستثمرين والمستأجرين اليوم.</p>
+                    <h2>3. التقنيات الروبوتية</h2>
+                    <p>دمج الروبوتات في تنظيف المساحات الواسعة يضمن دقة متناهية واستمرارية في العمل على مدار الساعة دون أخطاء بشرية.</p>
+                `
+            }
+        };
+
+        // دالة تحميل المحتوى بناءً على المعرف في الرابط
+        function initPage() {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id') || 'pool'; // الافتراضي مسابح
+            const data = blogDatabase[id];
+
+            if (data) {
+                document.getElementById('art-title').innerText = data.title;
+                document.getElementById('art-tag').innerText = data.tag;
+                document.getElementById('art-date').innerText = data.date;
+                document.getElementById('hero-img').src = data.img;
+                document.getElementById('art-content').innerHTML = data.content;
+                document.title = data.title + " | إيبرا مودرن";
+            }
+        }
+
+        // شريط تقدم القراءة
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("readingProgress").style.width = scrolled + "%";
+        };
+
+        initPage();
+    </script>
+</body>
+</html>

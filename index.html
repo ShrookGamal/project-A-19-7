@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>إيبرا مودرن | فخامة إدارة المرافق</title>
+    <!-- Google Fonts: Amiri & Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- الشاشة الافتتاحية (Splash Screen) باللوجو -->
+<div id="loader-screen">
+    <div class="loader-content">
+        <!-- ضع مسار اللوجو الخاص بك هنا -->
+        <img src="images/WhatsApp_Image_2026-07-21_at_1.54.46_AM-removebg-preview.png" alt="إيبرا مودرن" class="splash-logo-img">
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+</div>
+    <!-- الخلفية الزرقاء الداكنة والأشكال الهندسية -->
+<div class="geo-background">
+    <div class="geometric-shape g-cube"></div>
+    <div class="geometric-shape g-triangle"></div>
+    <div class="geometric-shape g-hexagon"></div>
+    <div class="geometric-shape g-line"></div>
+</div>
+    <!-- الناف بار النحيف -->
+    <header id="site-header">
+        <nav class="slim-nav">
+            <div class="brand-box">
+                <img src="images/WhatsApp_Image_2026-07-21_at_1.54.46_AM-removebg-preview.png" alt="Logo" class="site-logo">
+                <div class="brand-titles">
+                    <h1 class="main-name">إيبرا مودرن</h1>
+                    <p class="sub-tagline">لخدمات التنظيف وإدارة المرافق المتكاملة</p>
+                </div>
+            </div>
+
+            <ul class="desktop-links">
+                <li class="active"><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#blog"> المدونة</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+
+            <div class="nav-controls">
+                <a href="tel:+966560704020" class="quick-call-btn">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
+                <button class="mobile-toggle" id="open-menu">
+                    <span class="t-line"></span>
+                    <span class="t-line"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- المنيو الجانبية (الهابطة من الأعلى - موبايل فقط) -->
+    <div class="top-side-menu" id="side-menu">
+        <div class="menu-backdrop"></div>
+        <div class="menu-card">
+            <div class="menu-close" id="close-menu">&times;</div>
+            <ul class="mobile-links">
+                <li><a href="#home" class="m-link">الرئيسية</a></li>
+                <li><a href="#about" class="m-link">من نحن</a></li>
+                <li><a href="#vision" class="m-link">رؤيتنا</a></li>
+                <li><a href="#services" class="m-link">خدماتنا</a></li>
+                <li><a href="#blog" class="m-link">المدونة</a></li>
+                <li><a href="#contact" class="m-link">تواصل معنا</a></li>
+            </ul>
+            <div class="menu-footer">
+                <p>إيبرا مودرن © 2026</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- سكشن الهيرو الرئيسي -->
+    <main class="hero-wrapper" id="home">
+        <div class="glass-geometric-frame">
+            <div class="frame-inner">
+                <!-- الكبسولات المتحركة -->
+                <div class="status-pills">
+                    <div class="pill-item"><span>إدارة ذكية</span></div>
+                    <div class="pill-item"><span>تنظيف فائق</span></div>
+                    <div class="pill-item"><span>حلول مبتكرة</span></div>
+                </div>
+
+                <h1 class="hero-title">إيبرا مودرن</h1>
+                <h2 class="hero-subtitle">لخدمات التنظيف وإدارة المرافق المتكاملة</h2>
+                
+                <p class="hero-paragraph">
+                    تعد إيبرا مودرن رمزاً للفخامة والاحترافية. نحن لا نقدم خدمات تقليدية، بل نصيغ تجربة استثنائية من العناية الفائقة بالمساحات المعمارية والتجارية الكبرى، نضمن لكم بيئة عمل تتسم بالنقاء والرفاهية المطلقة.
+                </p>
+
+                <div class="hero-actions">
+                    <button class="btn-primary">اكتشف خدماتنا</button>
+                    <button class="btn-outline">تواصل معنا</button>
+                </div>
+            </div>
+            <!-- تأثيرات إضاءة البوكس -->
+            <div class="glow-corner g1"></div>
+            <div class="glow-corner g2"></div>
+        </div>
+
+        <!-- سهم الآيفون النحيف -->
+        <div class="iphone-scroll-indicator">
+            <div class="stick-line"></div>
+        </div>
+    </main>
+    <!-- سكشن من نحن والاحترافية -->
+<section id="about" class="about-section">
+    <div class="container">
+        <!-- النص التعريفي -->
+        <div class="about-header">
+            <h2 class="section-title">أرقامنا تتحدث عن تميزنا</h2>
+            <p class="section-desc">
+                في إيبرا مودرن، نؤمن بأن الأرقام هي الدليل الأصدق على الجودة. نحن لسنا مجرد شركة تنظيف، نحن منظومة متكاملة تسعى للكمال في كل تفصيلة معمارية وإدارية.
+            </p>
+        </div>
+
+        <!-- شبكة الإحصائيات (Stats Grid) -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" data-target="500">0</div>
+                <div class="stat-label">موظف متخصص +</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number-text">24/7</div>
+                <div class="stat-label">دعم فني واستجابة</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="75">0</div>
+                <div class="stat-label">مشروع منجز سنوياً +</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="99">0</div>
+                <div class="stat-label">% نسبة رضا العملاء</div>
+            </div>
+        </div>
+
+        <!-- الخطوط البيانية (Performance Bars) -->
+        <div class="performance-wrapper">
+            <div class="performance-content">
+                <h3 class="perf-title">كفاءة الأداء التشغيلي</h3>
+                
+                <div class="bar-group">
+                    <div class="bar-info"><span>كفاءة التنظيف</span><span class="pct">98%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" style="--w:98%;"></div></div>
+                </div>
+
+                <div class="bar-group">
+                    <div class="bar-info"><span>سرعة الاستجابة</span><span class="pct">95%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" style="--w:95%;"></div></div>
+                </div>
+
+                <div class="bar-group">
+                    <div class="bar-info"><span>تطور المعدات</span><span class="pct">100%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" style="--w:100%;"></div></div>
+                </div>
+
+                <div class="bar-group">
+                    <div class="bar-info"><span>الاستدامة</span><span class="pct">92%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" style="--w:92%;"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- سكشن الرؤية والرسالة -->
+<section id="vision" class="vision-mission-section">
+    <div class="vision-wrapper">
+        
+        <!-- الجانب الأيمن: الكروت النصية -->
+        <div class="vision-text-side">
+            
+            <!-- كرت الرؤية (ستايل زجاجي فاتح) -->
+            <div class="v-card light-glass animate-left">
+                <div class="v-card-icon"><i class="fas fa-eye"></i></div>
+                <div class="v-card-body">
+                    <h2 class="v-title">رؤيتنا</h2>
+                    <p class="v-desc">
+                        أن نصبح الشريك الاستراتيجي الأول والشركة الرائدة إقليمياً في إدارة المرافق الفاخرة، عبر إعادة تعريف مفهوم النظافة المؤسسية بلمسة من العصرنة والابتكار.
+                    </p>
+                </div>
+            </div>
+
+            <!-- كرت الرسالة (ستايل داكن فخم) -->
+            <div class="v-card dark-navy animate-left delay-v">
+                <div class="v-card-icon"><i class="fas fa-bullseye"></i></div>
+                <div class="v-card-body">
+                    <h2 class="v-title white-text">رسالتنا</h2>
+                    <p class="v-desc white-text">
+                        تقديم حلول تنظيف وإدارة مرافق متطورة تجمع بين الكفاءة التشغيلية والجمال البصري، مع التركيز التام على صحة البيئة وسعادة العملاء.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- الجانب الأيسر: الصورة الاستراتيجية -->
+        <div class="vision-image-side animate-right">
+            <div class="image-frame">
+                <img src="images/image.png" alt="معدات متطورة" class="strat-img">
+                <!-- تأثيرات هندسية فوق الصورة -->
+                <div class="img-overlay-box"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section id="services" class="ultra-luxury-services">
+    <div class="services-bg-decor">
+        <div class="decor-circle d1"></div>
+        <div class="decor-circle d2"></div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="mega-header">
+            <h2 class="amiri-title">إمبراطورية خدمات إيبرا مودرن</h2>
+            <div class="title-underline"><span></span></div>
+            <p class="mega-desc">
+                نحن في إيبرا مودرن لا نقدم خدمات، نحن نضع بصمة الرفاهية والنقاء في كل زاوية. حلولنا متكاملة، هندسية، ومصممة خصيصاً لتناسب القصور والمجمعات والمرافق الحيوية بأعلى المعايير العالمية التي لا تقبل المساومة.
+            </p>
+        </div>
+
+        <div class="services-3d-grid">
+            <div class="mega-card" data-aos="fade-up">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="s-icon-box"><i class="fas fa-crown"></i></div>
+                        <h3 class="s-title-amiri">تنظيف الفلل والقصور الراقية</h3>
+                        <p class="s-detailed-text">
+                            عناية ملكية تليق بخصوصية وفخامة قصوركم. نستخدم مواد تنظيف "PH-Neutral" مستوردة خصيصاً للحفاظ على التحف الفنية، النجف الكريستالي، الرخام الإيطالي، والأثاث المصنوع يدوياً، مع فريق مدرب على السرية التامة والاحترافية المطلقة.
+                        </p>
+                        <div class="card-footer"><span>عناية ملكية</span><i class="fas fa-chevron-left"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mega-card" data-aos="fade-up">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="s-icon-box"><i class="fas fa-city"></i></div>
+                        <h3 class="s-title-amiri">تنظيف واجهات المباني والكلادينج</h3>
+                        <p class="s-detailed-text">
+                            إعادة البريق الكريستالي لواجهات الأبراج والمجمعات السكنية. نعتمد تقنيات "Water-Fed Pole" والحبال الاحترافية (Rope Access) لتنظيف الزجاج، الألمنيوم، والكلادينج المعماري من آثار التلوث والأتربة، ليبقى مبناك واجهة للفخامة.
+                        </p>
+                        <div class="card-footer"><span>بريق دائم</span><i class="fas fa-chevron-left"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mega-card" data-aos="fade-up">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="s-icon-box"><i class="fas fa-hospital-user"></i></div>
+                        <h3 class="s-title-amiri">التعقيم الطبي التخصصي</h3>
+                        <p class="s-detailed-text">
+                            خدمة موجهة للمشافي، المختبرات، والعيادات. نستخدم مواد تعقيم معتمدة دولياً (Hospital-Grade) تقضي على 99.9% من الفيروسات والبكتيريا، مع الالتزام الصارم ببروتوكولات النظافة الصحية لضمان بيئة آمنة تماماً للمرضى والكادر الطبي.
+                        </p>
+                        <div class="card-footer"><span>أمان صحي</span><i class="fas fa-chevron-left"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mega-card" data-aos="fade-up">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="s-icon-box"><i class="fas fa-shield-virus"></i></div>
+                        <h3 class="s-title-amiri">مكافحة الحشرات والقوارض</h3>
+                        <p class="s-detailed-text">
+                            نظام وقاية وهجوم متكامل ضد كافة أنواع الآفات. نستخدم طعوم وأمصال عديمة الرائحة وآمنة على الأطفال والحيوانات الأليفة، مع ضمانات ممتدة وخطط متابعة دورية لضمان عدم عودة الحشرات لمنشأتكم نهائياً.
+                        </p>
+                        <div class="card-footer"><span>بيئة نظيفة</span><i class="fas fa-chevron-left"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mega-card" data-aos="fade-up">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="s-icon-box"><i class="fas fa-faucet-drip"></i></div>
+                        <h3 class="s-title-amiri">تنظيف وتعقيم خزانات المياه</h3>
+                        <p class="s-detailed-text">
+                            المياه هي شريان الحياة، ونحن نضمن نقاءها. نقوم بشفط الرواسب، جلي الجدران الداخلية للخزانات، وتعقيمها بمواد تقتل الطحالب والبكتيريا، مع عزل الشقوق لضمان وصول مياه عذبة ونقية لكل صنبور في منزلك.
+                        </p>
+                        <div class="card-footer"><span>نقاء تام</span><i class="fas fa-chevron-left"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mega-card" data-aos="fade-up">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="s-icon-box"><i class="fas fa-gem"></i></div>
+                        <h3 class="s-title-amiri">جلي وتلميع الرخام والجرانيت</h3>
+                        <p class="s-detailed-text">
+                            نعيد للأرضيات لمعانها الكريستالي الأصلي. نستخدم ماكينات الجلي بالألماس (Diamond Grinding) لإزالة الخدوش والطبقات الباهتة، ثم التلميع بالكريستال الإيطالي لإعطاء الأرضية ملمساً زجاجياً يعكس فخامة المكان.
+                        </p>
+                        <div class="card-footer"><span>بريق الألماس</span><i class="fas fa-chevron-left"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mega-card" data-aos="fade-up">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="s-icon-box"><i class="fas fa-wind"></i></div>
+                        <h3 class="s-title-amiri">غسيل وصيانة أنظمة التكييف</h3>
+                        <p class="s-detailed-text">
+                            هواء نقي وصحي وتنفس بلا أتربة. نقوم بغسيل الوحدات الداخلية والخارجية (سبليت، مركزي، كونسيلد) بأحدث أجهزة ضغط الماء، مع فحص الفريون وتنظيف الفلاتر لضمان أداء تبريد جبار وتقليل فواتير الكهرباء.
+                        </p>
+                        <div class="card-footer"><span>انتعاش دائم</span><i class="fas fa-chevron-left"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mega-card" data-aos="fade-up">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="s-icon-box"><i class="fas fa-dolly-flatbed"></i></div>
+                        <h3 class="s-title-amiri">نقل عفش وأثاث احترافي</h3>
+                        <p class="s-detailed-text">
+                            نقل بلا قلق لمقتنياتكم الغالية. فك وتركيب بواسطة فنيين نجارين، تغليف خماسي الطبقات ضد الصدمات، وسيارات نقل مغلقة ومجهزة، نضمن وصول كل قطعة أثاث لمكانها الجديد دون خدش واحد وبترتيب مثالي.
+                        </p>
+                        <div class="card-footer"><span>أمان ممتد</span><i class="fas fa-chevron-left"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mega-card" data-aos="fade-up">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="s-icon-box"><i class="fas fa-tools"></i></div>
+                        <h3 class="s-title-amiri">ترميم وصيانة المباني الشاملة</h3>
+                        <p class="s-detailed-text">
+                            نعيد للمباني القديمة رونقها الإنشائي والجمالي. معالجة التصدعات، ترميم الواجهات، أعمال الدهانات والديكور، وصيانة السباكة والكهرباء، نقدم حلولاً هندسية متكاملة تزيد من القيمة السوقية لمنشأتكم.
+                        </p>
+                        <div class="card-footer"><span>إبداع إنشائي</span><i class="fas fa-chevron-left"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mega-card" data-aos="fade-up">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="s-icon-box"><i class="fas fa-leaf"></i></div>
+                        <h3 class="s-title-amiri">تنسيق وصيانة الحدائق واللاندسكيب</h3>
+                        <p class="s-detailed-text">
+                            تحويل المساحات الخارجية إلى جنات غناء. تصميم شبكات الري الحديثة، زراعة النجيل الطبيعي والصناعي، تقليم الأشجار، وتنسيق الزهور الموسمية، لنمنحكم بيئة طبيعية هادئة للاسترخاء في قلب منزلك.
+                        </p>
+                        <div class="card-footer"><span>واحة خضراء</span><i class="fas fa-chevron-left"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mega-card" data-aos="fade-up">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="s-icon-box"><i class="fas fa-paint-roller"></i></div>
+                        <h3 class="s-title-amiri">تنظيف المواقع بعد الإنشاء والتشطيب</h3>
+                        <p class="s-detailed-text">
+                            تسليم الوحدات السكنية والتجارية جاهزة للسكن الفوري. إزالة بقايا الأسمنت، الدهانات، والغراء من الأرضيات والنوافذ بدقة متناهية، مع تلميع شامل لكل ركن لتبدو منشأتك الجديدة في أبهى صورها.
+                        </p>
+                        <div class="card-footer"><span>جاهزية تامة</span><i class="fas fa-chevron-left"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mega-card" data-aos="fade-up">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="s-icon-box"><i class="fas fa-couch"></i></div>
+                        <h3 class="s-title-amiri">غسيل الكنب والمجالس والستائر</h3>
+                        <p class="s-detailed-text">
+                            عناية فائقة بالأقمشة الحريرية والمخملية. نستخدم تقنية "البخار الجاف" والرغوة الكيميائية لإزالة أصعب البقع والروائح الكريهة من المجالس والكنب والستائر في مكانها، مع تعقيم كامل للحماية من مسببات الحساسية.
+                        </p>
+                        <div class="card-footer"><span>فخامة القماش</span><i class="fas fa-chevron-left"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mega-card" data-aos="fade-up">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="s-icon-box"><i class="fas fa-industry"></i></div>
+                        <h3 class="s-title-amiri">التنظيف الصناعي للمصانع والمستودعات</h3>
+                        <p class="s-detailed-text">
+                            حلول تنظيف ثقيلة للمنشآت الصناعية الكبرى. تنظيف خطوط الإنتاج، إزالة الشحوم والزيوت المستعصية، جلي أرضيات الإيبوكسي في المستودعات، مع الالتزام الكامل بقواعد السلامة المهنية والصناعية.
+                        </p>
+                        <div class="card-footer"><span>قوة تشغيلية</span><i class="fas fa-chevron-left"></i></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="blog" class="luxury-magazine">
+    <div class="container">
+        <div class="magazine-intro">
+            <h2 class="amiri-section-title">مجلة التميز المعماري 2026</h2>
+            <p class="magazine-desc">اكتشف أحدث استراتيجيات العناية بالقصور والفلل والمرافق الذكية عبر مقالات حصرية من خبراء إيبرا مودرن.</p>
+        </div>
+
+        <div class="magazine-grid">
+            <div class="mag-card">
+                <div class="mag-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=1000" alt="تنظيف المسابح">
+                    <div class="mag-tag">صيانة خارجية</div>
+                </div>
+                <div class="mag-content">
+                    <span class="mag-date">12 يناير 2026</span>
+                    <h3 class="amiri-mag-title">7 خطوات أساسية في تنظيف مسابح الفلل لضمان مياه نقية وصحية</h3>
+                    <p class="mag-excerpt">المسابح ليست مجرد ديكور، بل هي رئاسة المنزل الخارجية. في هذا المقال نستعرض بروتوكول التعقيم الكيميائي المتطور...</p>
+                    <a href="blog-details.html?id=pool" class="mag-btn">اقرأ التفاصيل الكاملة <i class="fas fa-long-arrow-alt-left"></i></a>
+                </div>
+            </div>
+            <div class="mag-card">
+                <div class="mag-img-wrapper">
+                    <img src="images/blog2.jpg" alt="تنسيق الحدائق">
+                    <div class="mag-tag">لاندسكيب</div>
+                </div>
+                <div class="mag-content">
+                    <span class="mag-date">05 فبراير 2026</span>
+                    <h3 class="amiri-mag-title">5 أفكار مبتكرة في تنسيق حدائق الفلل لتحويلها إلى واحة استرخاء خاصة</h3>
+                    <p class="mag-excerpt">كيف تدمج أنظمة الري الذكية مع التصميم الهندسي للمساحات الخضراء؟ إليك دليل إيبرا مودرن لتنسيق الحدائق الملكية...</p>
+                    <a href="blog-details.html?id=garden" class="mag-btn">اقرأ التفاصيل الكاملة <i class="fas fa-long-arrow-alt-left"></i></a>
+                </div>
+            </div>
+            <div class="mag-card">
+                <div class="mag-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1000" alt="تنظيف المجالس">
+                    <div class="mag-tag">عناية داخلية</div>
+                </div>
+                <div class="mag-content">
+                    <span class="mag-date">18 مارس 2026</span>
+                    <h3 class="amiri-mag-title">6 أخطاء شائعة في تنظيف مجالس الضيوف تدمر الأقمشة الحريرية وكيفية تجنبها</h3>
+                    <p class="mag-excerpt">المجالس هي واجهة الكرم؛ لذا فإن استخدام البخار الخاطئ قد يتلف الأنسجة. تعلم الطرق العلمية للغسيل الجاف والتعقيم...</p>
+                    <a href="blog-details.html?id=majlis" class="mag-btn">اقرأ التفاصيل الكاملة <i class="fas fa-long-arrow-alt-left"></i></a>
+                </div>
+            </div>
+            <div class="mag-card">
+                <div class="mag-img-wrapper">
+                    <img src="images/blog4.webp" alt="جلي الرخام">
+                    <div class="mag-tag">تلميع ومعالجة</div>
+                </div>
+                <div class="mag-content">
+                    <span class="mag-date">22 أبريل 2026</span>
+                    <h3 class="amiri-mag-title">5 مراحل احترافية في جلي وتلميع رخام منزلك ليعود كأنه جديد تماماً</h3>
+                    <p class="mag-excerpt">الرخام يحتاج إلى تنفس وعناية ماسية. نكشف لك مراحل التلميع الكريستالي التي تتبعها إيبرا مودرن للأرضيات الفاخرة...</p>
+                    <a href="blog-details.html?id=marble" class="mag-btn">اقرأ التفاصيل الكاملة <i class="fas fa-long-arrow-alt-left"></i></a>
+                </div>
+            </div>
+            <div class="mag-card">
+                <div class="mag-img-wrapper">
+                    <img src="images/OIP.webp" alt="تنظيف السجاد">
+                    <div class="mag-tag">تطهير عميق</div>
+                </div>
+                <div class="mag-content">
+                    <span class="mag-date">10 مايو 2026</span>
+                    <h3 class="amiri-mag-title">6 نصائح ذهبية في تنظيف سجاد وموكيت منزلك للحفاظ على ألوانه ورونقه</h3>
+                    <p class="mag-excerpt">كيف تحمي ألياف السجاد من التآكل وفقدان اللون؟ تعرف على تقنيات شفط الأتربة المجهرية والتعقيم ضد البكتيريا...</p>
+                    <a href="blog-details.html?id=carpet" class="mag-btn">اقرأ التفاصيل الكاملة <i class="fas fa-long-arrow-alt-left"></i></a>
+                </div>
+            </div>
+            <div class="mag-card">
+                <div class="mag-img-wrapper">
+                    <img src="images/contact.png" alt="إدارة المرافق">
+                    <div class="mag-tag">إدارة ذكية</div>
+                </div>
+                <div class="mag-content">
+                    <span class="mag-date">30 يونيو 2026</span>
+                    <h3 class="amiri-mag-title">مستقبل إدارة المرافق 2026: كيف ترفع النظافة الذكية من القيمة السوقية لعقارك؟</h3>
+                    <p class="mag-excerpt">التكنولوجيا ليست رفاهية، بل هي أداة لتقليل التكاليف وزيادة العمر الافتراضي للمباني. استكشف حلول إيبرا المتكاملة...</p>
+                    <a href="blog-details.html?id=smart" class="mag-btn">اقرأ التفاصيل الكاملة <i class="fas fa-long-arrow-alt-left"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="why-us" class="why-us-tech-section">
+    <div class="why-decor-bg">
+        <div class="g-line-v"></div>
+        <div class="g-circle-v"></div>
+    </div>
+
+    <div class="container">
+        <div class="why-main-header" data-aos="fade-down">
+            <h2 class="amiri-why-title">سر تميزنا المؤسسي</h2>
+            <div class="why-glow-line"></div>
+        </div>
+        <div class="features-dynamic-grid">
+            <div class="feature-glass-card animate-scroll">
+                <div class="f-icon-wrap"><i class="fas fa-leaf"></i></div>
+                <div class="f-content">
+                    <h3 class="amiri-f-title">الالتزام البيئي المستدام</h3>
+                    <p class="f-text">
+                        جميع المواد المستخدمة في إيبرا مودرن صديقة للبيئة وآمنة تماماً على صحة الإنسان والمنشأة. نحن نتبنى ريادة الاستدامة كمنهج حياة، وليس فقط كخدمة.
+                    </p>
+                </div>
+                <div class="card-border-glow"></div>
+            </div>
+            <div class="feature-glass-card animate-scroll">
+                <div class="f-icon-wrap"><i class="fas fa-robot"></i></div>
+                <div class="f-content">
+                    <h3 class="amiri-f-title">الابتكار التكنولوجي الذكي</h3>
+                    <p class="f-text">
+                        نستثمر في أحدث الروبوتات والآلات الصناعية ذات الذكاء الاصطناعي لضمان نتائج مبهرة في وقت قياسي وبأعلى مستويات الدقة الهندسية المعاصرة.
+                    </p>
+                </div>
+                <div class="card-border-glow"></div>
+            </div>
+
+        </div>
+        <div class="team-power-banner animate-scroll">
+            <div class="banner-inner">
+                <p>فريقنا هو القوة الدافعة خلف نجاحنا؛ تدريب مستمر، احترافية عالية، وشغف بالكمال.</p>
+            </div>
+        </div>
+        <div class="achievements-showcase animate-scroll">
+            <h2 class="amiri-why-title">سجل من الإنجازات في المنشآت الضخمة</h2>
+            <p class="achieve-desc">
+                نفخر بإدارة تنظيف وتشغيل كبرى المراكز التجارية، المجمعات الحكومية، والمباني الإدارية الشاهقة. نضع معاييرنا فوق المنافسة لنلبي تطلعات الشركاء الاستراتيجيين.
+            </p>
+        </div>
+        <div class="grand-philosophy animate-scroll">
+            <p class="amiri-quote">
+                "نحن لا ننظف المكان فحسب، بل نحافظ على قيمة أصولكم المعمارية للأجيال القادمة عبر الابتكار والاستدامة والكمال التشغيلي"
+            </p>
+            <div class="values-tags">
+                <span>الجودة</span>
+                <span class="v-dot">•</span>
+                <span>النزاهة</span>
+                <span class="v-dot">•</span>
+                <span>الشغف</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section id="contact" class="the-final-contact">
+    <!-- حل مشكلة الصورة: وضعناها هنا مباشرة لضمان قراءة المسار -->
+    <div class="contact-fixed-bg" style="background-image: url('images/contact.png');"></div>
+    <div class="contact-dark-shield"></div>
+
+    <div class="contact-inner-content">
+        <div class="contact-main-header">
+            <h2 class="amiri-font">تواصل مباشر معنا</h2>
+            <div class="luxury-separator"></div>
+        </div>
+
+        <div class="luxury-contact-grid">
+            
+            <!-- الكرت الأول: بيانات التواصل المباشر -->
+            <div class="contact-glass-panel">
+                <h3 class="amiri-font">معلومات التواصل</h3>
+                <div class="contact-rows">
+                    <!-- الرقم الأول -->
+                    <div class="contact-row-box">
+                        <div class="row-text">
+                            <span class="row-label">تواصل معنا </span>
+                            <span class="row-val">966560704020+</span>
+                        </div>
+                        <div class="row-actions">
+                            <a href="tel:+966560704020" class="row-btn call-btn"><i class="fas fa-phone-alt"></i> اتصال</a>
+                            <a href="https://wa.me/966560704020" target="_blank" class="row-btn wa-btn"><i class="fab fa-whatsapp"></i> واتساب</a>
+                        </div>
+                    </div>
+                    <!-- الرقم الثاني -->
+                    <div class="contact-row-box">
+                        <div class="row-text">
+                            <span class="row-label">تواصل معنا </span>
+                            <span class="row-val">966576483008+</span>
+                        </div>
+                        <div class="row-actions">
+                            <a href="tel:+966576483008" class="row-btn call-btn"><i class="fas fa-phone-alt"></i> اتصال</a>
+                            <a href="https://wa.me/966576483008" target="_blank" class="row-btn wa-btn"><i class="fab fa-whatsapp"></i> واتساب</a>
+                        </div>
+                    </div>
+                    <!-- الايميلات -->
+                    <div class="contact-row-box email-only">
+                        <i class="fas fa-envelope-open"></i>
+                        <div class="email-stack">
+                            <a href="mailto:info@ebramodern.com">info@ebramodern.com</a>
+                            <a href="mailto:ibramodern.info@gmail.com">ibramodern.info@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الكرت الثاني: فورم الواتساب -->
+            <div class="contact-glass-panel">
+                <h3 class="amiri-font">طلب خدمة فورية</h3>
+                <form id="finalWaForm" class="contact-form-luxury">
+                    <input type="text" id="fnName" placeholder="الاسم" required>
+                    <select id="fnService" required>
+                        <option value="" disabled selected>اختر الخدمة</option>
+                        <option value="تنظيف فلل">تنظيف فلل وقصور</option>
+                        <option value="جلي رخام">جلي وتلميع رخام</option>
+                        <option value="صيانة مكيفات">صيانة مكيفات</option>
+                        <option value="مكافحة حشرات">مكافحة حشرات</option>
+                    </select>
+                    <textarea id="fnMsg" placeholder="ملاحظاتك..." rows="3"></textarea>
+                    <button type="button" class="fn-submit-btn" onclick="sendFinalWhatsApp()">
+                        <span>إرسال عبر الواتساب</span>
+                        <i class="fab fa-whatsapp"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- الفوتر الملكي - ختام الفخامة -->
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <!-- العمود الأول: الهوية -->
+            <div class="footer-col identity">
+                <div class="footer-logo">
+                    <img src="images/WhatsApp_Image_2026-07-21_at_1.54.46_AM-removebg-preview.png" alt="Logo">
+                    <h2 class="amiri-font">إيبرا مودرن</h2>
+                </div>
+                <p class="footer-desc">
+                    الريادة في إدارة المرافق الفاخرة وتقديم حلول التنظيف المتكاملة للقصور والمجمعات الكبرى بأعلى معايير الجودة والاستدامة العالمية.
+                </p>
+                
+            </div>
+
+            <!-- العمود الثاني: روابط سريعة -->
+            <div class="footer-col">
+                <h3 class="amiri-font">روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#vision">رؤيتنا ورسالتنا</a></li>
+                    <li><a href="#blog">مدونة التميز</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <!-- العمود الثالث: خدماتنا -->
+            <div class="footer-col">
+                <h3 class="amiri-font">خدماتنا</h3>
+                <ul class="footer-links">
+                    <li><a href="#services">تنظيف الفلل والقصور</a></li>
+                    <li><a href="#services">جلي وتلميع الرخام</a></li>
+                    <li><a href="#services">مكافحة الحشرات</a></li>
+                    <li><a href="#services">صيانة المكيفات</a></li>
+                    <li><a href="#services">تنسيق الحدائق</a></li>
+                </ul>
+            </div>
+
+            <!-- العمود الرابع: بيانات التواصل -->
+            <div class="footer-col">
+                <h3 class="amiri-font">بيانات التواصل</h3>
+                <ul class="footer-info">
+                    <li><i class="fas fa-map-marker-alt"></i> الرياض، حي النرجس</li>
+                    <li><i class="fas fa-phone-alt"></i> 966560704020+</li>
+                    <li><i class="fas fa-phone-alt"></i> 966576483008+</li>
+                    <li><i class="fas fa-envelope"></i> info@ebramodern.com</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- حقوق الملكية والبرمجة -->
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>جميع الحقوق محفوظة © 2026 لشركة <span class="blue-text">إيبرا مودرن</span> لإدارة المرافق</p>
+            </div>
+            <div class="developer-credit">
+                <p>تصميم وبرمجة <a href="https://www.facebook.com/share/17UzqgSwiu/" target="_blank" class="gmt-link">GMTWeb</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- الأزرار العائمة للتواصل السريع -->
+<div class="floating-contact-container">
+    <!-- زر الواتساب العائم -->
+    <a href="https://wa.me/966560704020" class="float-action-btn whatsapp-float" target="_blank" title="تواصل عبر الواتساب">
+        <i class="fab fa-whatsapp"></i>
+        <span class="btn-label">واتساب</span>
+    </a>
+
+    <!-- زر الاتصال العائم -->
+    <a href="tel:+966560704020" class="float-action-btn call-float" title="اتصال هاتفي">
+        <i class="fas fa-phone-alt"></i>
+        <span class="btn-label">اتصال</span>
+    </a>
+</div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
