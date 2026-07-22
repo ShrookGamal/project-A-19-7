@@ -3,7 +3,6 @@
     --d-grey: #4A4E51;
     --l-grey: #6E7275;
     --bg: #0a0e14;
-    --font-amiri: 'Amiri', serif;
     --font-cairo: 'Cairo', sans-serif;
     --glass: rgba(255, 255, 255, 0.03);
     --border: rgba(255, 255, 255, 0.1);
@@ -1129,4 +1128,60 @@ body {
     top: 0 !important;
     visibility: visible !important;
     opacity: 1 !important;
+}
+.btn-primary, .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
+    transition: 0.4s;
+}
+:root {
+    --font-cairo: 'Cairo', sans-serif;
+}
+
+* {
+    font-family: var(--font-cairo) !important;
+}
+h1, h2, h3, .amiri-font, .amiri-title, .hero-title {
+    font-family: var(--font-cairo) !important;
+    font-weight: 900; 
+}
+p, span, a, li, input, textarea, select {
+    font-family: var(--font-cairo) !important;
+    font-weight: 500; 
+}
+html, body, h1, h2, h3, h4, h5, h6, p, span, a, li, input, select, textarea, button, div:not(.fa):not(.fab):not(.fas) {
+    font-family: 'Cairo', sans-serif !important;
+}
+i, .fas, .fab, .far, .fa-solid, .fa-brands {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", sans-serif !important;
+}
+.site-logo, .main-logo {
+    height: 70px !important; 
+    transition: 0.3s ease-in-out;
+}
+header.scrolled .site-logo, header.scrolled .main-logo {
+    height: 50px !important;
+}
+@media (max-width: 768px) {
+    .site-logo, .main-logo {
+        height: 48px !important; 
+    }
+}
+.site-logo, .main-logo {
+    height: 65px !important; 
+    transition: 0.3s ease-in-out;
+}
+header.scrolled .site-logo, header.scrolled .main-logo {
+    height: 50px !important;
+}
+@media (max-width: 768px) {
+    .site-logo, .main-logo {
+        height: 48px !important; 
+    }
+}
+.splash-logo-img {
+    width: 160px !important; 
+    max-width: 70% !important; 
 }
