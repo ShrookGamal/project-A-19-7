@@ -1,4 +1,3 @@
-/* --- الألوان والخطوط --- */
 :root {
     --p-blue: #3A9BDC;
     --d-grey: #4A4E51;
@@ -18,8 +17,6 @@ body {
     overflow-x: hidden;
     font-family: var(--font-cairo);
 }
-
-/* --- Loader --- */
 #loader-screen {
     position: fixed; inset: 0; background: #000; z-index: 9999;
     display: flex; justify-content: center; align-items: center;
@@ -29,16 +26,12 @@ body {
 .progress-container { width: 150px; height: 2px; background: rgba(255,255,255,0.1); margin-top: 15px; position: relative; overflow: hidden; }
 .progress-bar { width: 100%; height: 100%; background: var(--p-blue); position: absolute; left: -100%; animation: load 2s infinite; }
 @keyframes load { to { left: 100%; } }
-
-/* --- Animated Mesh Background --- */
 .geo-background { position: fixed; inset: 0; z-index: -1; overflow: hidden; }
 .mesh-shape { position: absolute; border: 1px solid rgba(58, 155, 220, 0.15); animation: meshMove 20s infinite alternate linear; }
 .s1 { width: 400px; height: 400px; top: -10%; left: -10%; border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%; }
 .s2 { width: 300px; height: 300px; bottom: 10%; right: 5%; border-radius: 50%; border-color: rgba(110, 114, 117, 0.2); }
 .s3 { width: 250px; height: 250px; top: 40%; left: 50%; border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
 @keyframes meshMove { 0% { transform: rotate(0deg) translate(0,0); } 100% { transform: rotate(360deg) translate(50px, 50px); } }
-
-/* --- Slim Navbar (Amiri Font) --- */
 header { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 15px 5%; display: flex; justify-content: center; }
 .slim-nav {
     width: 100%; max-width: 1300px; height: 75px; background: rgba(255, 255, 255, 0.05);
@@ -64,8 +57,6 @@ header { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 15px 5%; 
     border-radius: 50%; display: flex; justify-content: center; align-items: center; 
     text-decoration: none; box-shadow: 0 0 15px rgba(58, 155, 220, 0.5);
 }
-
-/* --- Dropdown Mobile Menu (The New Soul) --- */
 .top-side-menu {
     position: fixed; top: -100%; left: 0; width: 100%; height: 100vh;
     z-index: 2000; transition: 0.6s cubic-bezier(0.8, 0, 0.2, 1);
@@ -83,8 +74,6 @@ header { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 15px 5%; 
 .mobile-links li { margin: 25px 0; }
 .m-link { font-family: var(--font-amiri); font-size: 2rem; color: #fff; text-decoration: none; font-weight: 700; }
 .m-link:hover { color: var(--p-blue); }
-
-/* --- Hero Section --- */
 .hero-wrapper { 
     min-height: 100vh; display: flex; align-items: center; justify-content: center; 
     padding: 100px 5% 60px 5%; position: relative;
@@ -111,8 +100,6 @@ header { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 15px 5%; 
 .btn-primary { background: var(--p-blue); color: #fff; padding: 15px 40px; border-radius: 15px; border: none; font-weight: 900; font-size: 1.1rem; cursor: pointer; transition: 0.3s; }
 .btn-outline { background: transparent; color: #fff; padding: 15px 40px; border-radius: 15px; border: 2px solid var(--border); font-weight: 900; cursor: pointer; transition: 0.3s; }
 .btn-primary:hover { transform: translateY(-5px); filter: brightness(1.2); }
-
-/* --- iPhone Scroll Arrow --- */
 .iphone-scroll-indicator { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); }
 .stick-line { 
     width: 2px; height: 50px; background: linear-gradient(to bottom, var(--p-blue), transparent); 
@@ -124,8 +111,6 @@ header { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 15px 5%; 
     transform: translateX(-50%) rotate(45deg);
 }
 @keyframes arrowAnim { 0%, 100% { height: 40px; transform: translateY(0); } 50% { height: 60px; transform: translateY(10px); } }
-
-/* --- Responsive & Mobile --- */
 .mobile-toggle { display: none; background: transparent; border: none; flex-direction: column; gap: 6px; cursor: pointer; }
 .t-line { width: 25px; height: 2px; background: var(--p-blue); box-shadow: 0 0 5px var(--p-blue); }
 
@@ -143,21 +128,18 @@ header { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 15px 5%; 
 }
 
 @media (min-width: 993px) {
-    .top-side-menu { display: none; } /* إخفاء تماماً في الكمبيوتر */
+    .top-side-menu { display: none; } 
 }
-/* --- 1. الألوان: خلفية أزرق داكن (ليست سوداء) --- */
 :root {
-    --p-blue: #3A9BDC; /* أزرق اللوجو */
-    --p-blue-light: #5DBCF9; /* أزرق فاتح للأشكال */
-    --bg-dark-blue: #0d1b2a; /* خلفية أزرق داكنة جداً وفخمة */
+    --p-blue: #3A9BDC;
+    --p-blue-light: #5DBCF9; 
+    --bg-dark-blue: #0d1b2a; 
     --font-amiri: 'Amiri', serif;
 }
 
 body {
     background-color: var(--bg-dark-blue);
 }
-
-/* --- 2. ستايل الأشكال الهندسية الحادة --- */
 .geo-background {
     position: fixed;
     inset: 0;
@@ -209,31 +191,24 @@ body {
     50% { transform: translate(30px, 30px) rotate(180deg); }
     100% { transform: translate(0,0) rotate(360deg); }
 }
-
-/* --- 3. تعديل وضع السايد منيو (إنزالها لأسفل) --- */
 @media (max-width: 992px) {
     .menu-card {
-        margin-top: 150px !important; /* إنزال المنيو لتبدأ تحت الناف بار بمساحة كافية */
+        margin-top: 150px !important; 
         width: 92% !important;
         padding: 30px 20px !important;
     }
     
     .top-side-menu.active {
-        top: 0; /* تظل تنزل من فوق لكن البوكس نفسه منزاح للأسفل */
+        top: 0;
     }
 }
-
-/* تحديث ألوان النصوص لتكون واضحة على الخلفية الزرقاء */
 .hero-paragraph {
     color: rgba(255, 255, 255, 0.85);
 }
-/* --- توزيع الأشكال الهندسية بعيداً عن المركز --- */
-
 .geo-background {
     position: fixed;
     inset: 0;
     z-index: -1;
-    /* خلفية أزرق داكنة جداً وفخمة كما طلبت */
     background: radial-gradient(circle at center, #162a41 0%, #0d1b2a 100%);
     overflow: hidden;
 }
@@ -244,8 +219,6 @@ body {
     background: rgba(93, 188, 249, 0.02);
     animation: floatGeo 15s infinite alternate ease-in-out;
 }
-
-/* 1. المكعب - أعلى اليسار */
 .g-cube {
     width: 100px; height: 100px;
     top: 15%; 
@@ -253,8 +226,6 @@ body {
     transform: rotate(15deg);
     animation-duration: 18s;
 }
-
-/* 2. المثلث - أسفل اليمين */
 .g-triangle {
     width: 0; height: 0;
     border-left: 55px solid transparent;
@@ -266,8 +237,6 @@ body {
     animation-duration: 22s;
     animation-delay: -2s;
 }
-
-/* 3. المسدس - منتصف اليمين (أعلى قليلاً) */
 .g-hexagon {
     width: 90px; height: 52px;
     top: 25%; 
@@ -276,8 +245,6 @@ body {
     animation-duration: 20s;
     animation-delay: -5s;
 }
-
-/* 4. الخط التقني - أسفل اليسار */
 .g-line {
     width: 180px; height: 1px;
     background: linear-gradient(90deg, transparent, var(--p-blue-light), transparent);
@@ -286,8 +253,6 @@ body {
     transform: rotate(-30deg);
     animation: lineFade 6s infinite alternate;
 }
-
-/* --- أنيميشن الحركة الموزعة --- */
 @keyframes floatGeo {
     0% { transform: translate(0, 0) rotate(0deg); }
     100% { transform: translate(40px, 40px) rotate(45deg); }
@@ -297,17 +262,14 @@ body {
     0% { opacity: 0.2; transform: translateX(0) rotate(-30deg); }
     100% { opacity: 0.6; transform: translateX(30px) rotate(-30deg); }
 }
-
-/* ضمان أن البوكس في المنتصف تماماً ولا يتأثر */
 .glass-geometric-frame {
     position: relative;
-    z-index: 10; /* فوق الأشكال دائماً */
+    z-index: 10;
     margin: 0 auto;
 }
-/* --- سكشن من نحن (ستايل فاتح وعبقري) --- */
 .about-section {
     padding: 100px 5%;
-    background: #ffffff; /* سكشن فاتح ونظيف */
+    background: #ffffff; 
     position: relative;
     overflow: hidden;
 }
@@ -340,8 +302,6 @@ body {
     color: var(--l-grey);
     line-height: 1.8;
 }
-
-/* شبكة الإحصائيات */
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -373,8 +333,6 @@ body {
     color: var(--d-grey);
     margin-bottom: 10px;
 }
-
-/* تمييز الأرقام بلون اللوجو عند التفاعل */
 .stat-card:hover .stat-number { color: var(--p-blue); }
 
 .stat-label {
@@ -382,8 +340,6 @@ body {
     color: var(--l-grey);
     font-weight: 700;
 }
-
-/* الخطوط البيانية (Performance) */
 .performance-wrapper {
     max-width: 900px;
     margin: 0 auto;
@@ -420,14 +376,12 @@ body {
 
 .bar-fill {
     height: 100%;
-    width: 0; /* يبدأ من الصفر للأنيميشن */
+    width: 0;
     background: linear-gradient(90deg, var(--p-blue), #5DBCF9);
     border-radius: 10px;
     transition: 1.5s cubic-bezier(0.17, 0.85, 0.43, 1);
     position: relative;
 }
-
-/* لمعة على شريط التحميل */
 .bar-fill::after {
     content: '';
     position: absolute;
@@ -440,8 +394,6 @@ body {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
 }
-
-/* تجاوب الموبايل */
 @media (max-width: 992px) {
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .section-title { font-size: 2.5rem; }
@@ -451,10 +403,9 @@ body {
 @media (max-width: 500px) {
     .stats-grid { grid-template-columns: 1fr; }
 }
-/* --- سكشن الرؤية والرسالة --- */
 .vision-mission-section {
     padding: 100px 8%;
-    background: #f8fafc; /* خلفية فاتحة هادئة */
+    background: #f8fafc; 
     overflow: hidden;
 }
 
@@ -464,8 +415,6 @@ body {
     gap: 50px;
     align-items: center;
 }
-
-/* --- تنسيق الكروت --- */
 .vision-text-side {
     display: flex;
     flex-direction: column;
@@ -485,15 +434,11 @@ body {
 .v-card:hover {
     transform: translateX(-15px) scale(1.02);
 }
-
-/* الكرت الفاتح */
 .light-glass {
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255,255,255,0.8);
 }
-
-/* الكرت الداكن (أزرق اللوجو العميق) */
 .dark-navy {
     background: #0d1b2a;
     border: 1px solid rgba(58, 155, 220, 0.2);
@@ -520,8 +465,6 @@ body {
     color: var(--l-grey);
     font-weight: 500;
 }
-
-/* --- جانب الصورة --- */
 .vision-image-side {
     position: relative;
 }
@@ -543,8 +486,6 @@ body {
 .image-frame:hover .strat-img {
     transform: scale(1.1);
 }
-
-/* الزخارف فوق الصورة */
 .img-overlay-box {
     position: absolute;
     top: 20px; left: 20px;
@@ -574,25 +515,20 @@ body {
     from { transform: translateY(0); }
     to { transform: translateY(-20px); }
 }
-
-/* --- Responsive --- */
 @media (max-width: 992px) {
     .vision-wrapper { grid-template-columns: 1fr; }
-    .vision-image-side { order: -1; } /* الصورة فوق في الموبايل */
+    .vision-image-side { order: -1; } 
     .strat-img { height: 350px; }
     .v-title { font-size: 2rem; }
     .v-card { padding: 30px; flex-direction: column; }
     .floating-badge { right: 20px; }
 }
-/* --- سكشن الخدمات الالترا لوكجري --- */
 .ultra-luxury-services {
     padding: 150px 5%;
     background: #fdfdfd;
     position: relative;
     overflow: hidden;
 }
-
-/* عناصر ديكور في الخلفية */
 .services-bg-decor .decor-circle {
     position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.15; z-index: 0;
 }
@@ -628,8 +564,6 @@ body {
 .mega-desc {
     font-size: 1.4rem; color: var(--l-grey); line-height: 2; font-weight: 500;
 }
-
-/* شبكة الكروت العملاقة */
 .services-3d-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -637,8 +571,6 @@ body {
     position: relative;
     z-index: 2;
 }
-
-/* ستايل الكرت العبقري */
 .mega-card {
     perspective: 1500px;
 }
@@ -653,8 +585,6 @@ body {
     position: relative;
     overflow: hidden;
 }
-
-/* تأثير التوهج عند الوقوف على الكرت */
 .mega-card:hover .card-inner {
     transform: translateY(-20px) rotateX(5deg);
     border-color: var(--p-blue);
@@ -667,8 +597,6 @@ body {
     transition: 0.8s;
 }
 .mega-card:hover .card-inner::before { top: 0; left: 0; }
-
-/* الأيقونة والأنيميشن */
 .s-icon-box {
     width: 90px; height: 90px; background: #f8fafc; border-radius: 25px;
     display: flex; justify-content: center; align-items: center;
@@ -703,8 +631,6 @@ body {
 .card-footer span { font-weight: 900; color: var(--p-blue); text-transform: uppercase; letter-spacing: 1px; }
 .card-footer i { color: var(--l-grey); transition: 0.3s; }
 .mega-card:hover .card-footer i { transform: translateX(-10px); color: var(--p-blue); }
-
-/* الموبايل */
 @media (max-width: 1200px) { .services-3d-grid { grid-template-columns: repeat(2, 1fr); } }
 
 @media (max-width: 768px) {
@@ -719,7 +645,7 @@ body {
 
 .magazine-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 في كل صف كما طلبت */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 40px;
 }
 
@@ -760,11 +686,8 @@ body {
     font-size: 1.1rem; transition: 0.3s;
 }
 .mag-btn:hover { color: #0d1b2a; gap: 15px; }
-
-/* الموبايل */
 @media (max-width: 992px) { .magazine-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 768px) { .magazine-grid { grid-template-columns: 1fr; } }
-/* --- سكشن لماذا نحن (النسخة التكنولوجية) --- */
 .why-us-tech-section {
     padding: 150px 5%;
     background: radial-gradient(circle at center, #162a41 0%, #0d1b2a 100%);
@@ -772,8 +695,6 @@ body {
     overflow: hidden;
     color: #fff;
 }
-
-/* ديكورات الخلفية */
 .why-decor-bg .g-line-v {
     position: absolute; top: 20%; left: -5%; width: 300px; height: 1px;
     background: var(--p-blue); transform: rotate(45deg); opacity: 0.2;
@@ -786,8 +707,6 @@ body {
 .why-main-header { text-align: center; margin-bottom: 80px; }
 .amiri-why-title { font-family: 'Amiri', serif; font-size: 3.5rem; font-weight: 700; margin-bottom: 20px; }
 .why-glow-line { width: 100px; height: 3px; background: var(--p-blue); margin: 0 auto; box-shadow: 0 0 15px var(--p-blue); }
-
-/* شبكة الكروت الزجاجية */
 .features-dynamic-grid {
     display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-bottom: 60px;
 }
@@ -816,20 +735,14 @@ body {
 
 .amiri-f-title { font-family: 'Amiri', serif; font-size: 2.2rem; margin-bottom: 15px; }
 .f-text { font-size: 1.1rem; color: #ccc; line-height: 1.8; }
-
-/* شريط القوة الدافعة */
 .team-power-banner {
     background: #0d1b2a; border: 1px solid var(--p-blue); border-radius: 25px;
     padding: 30px; margin-bottom: 80px; text-align: center;
     box-shadow: 0 0 30px rgba(58, 155, 220, 0.2);
 }
 .banner-inner p { font-size: 1.4rem; font-weight: 800; color: #fff; }
-
-/* سجل الإنجازات */
 .achievements-showcase { text-align: center; margin-bottom: 100px; max-width: 900px; margin-left: auto; margin-right: auto; }
 .achieve-desc { font-size: 1.3rem; color: #aaa; line-height: 1.9; }
-
-/* الفلسفة الختامية */
 .grand-philosophy { text-align: center; position: relative; }
 .amiri-quote {
     font-family: 'Amiri', serif; font-size: 3rem; line-height: 1.4;
@@ -838,19 +751,14 @@ body {
 
 .values-tags { display: flex; justify-content: center; gap: 15px; color: var(--p-blue); font-weight: 900; font-size: 1.2rem; }
 .v-dot { color: #fff; opacity: 0.3; }
-
-/* أنيميشن الظهور */
 .animate-scroll { opacity: 0; transform: translateY(50px); transition: 1s all ease; }
 .animate-scroll.visible { opacity: 1; transform: translateY(0); }
-
-/* الموبايل */
 @media (max-width: 992px) {
     .features-dynamic-grid { grid-template-columns: 1fr; }
     .amiri-why-title { font-size: 2.2rem; }
     .amiri-quote { font-size: 1.8rem; }
     .feature-glass-card { padding: 40px 25px; flex-direction: column; text-align: center; }
 }
-/* --- السكشن الرئيسي (توسيط مطلق) --- */
 .the-final-contact {
     position: relative;
     width: 100%;
@@ -862,8 +770,6 @@ body {
     overflow: hidden;
     background-color: #0d1b2a;
 }
-
-/* --- تنسيق الخلفية (مضمون 100%) --- */
 .contact-fixed-bg {
     position: absolute;
     inset: 0;
@@ -872,7 +778,6 @@ body {
     background-repeat: no-repeat;
     filter: blur(10px) brightness(0.4);
     z-index: -2;
-    /* لإضافة حركة بسيطة */
     transform: scale(1.05);
 }
 
@@ -882,8 +787,6 @@ body {
     background: linear-gradient(135deg, rgba(13,27,42,0.8), rgba(58,155,220,0.4));
     z-index: -1;
 }
-
-/* --- الحاوية المركزية --- */
 .contact-inner-content {
     width: 100%;
     max-width: 1250px;
@@ -893,12 +796,10 @@ body {
 .contact-main-header { text-align: center; margin-bottom: 70px; }
 .contact-main-header h2 { font-family: 'Amiri', serif; font-size: 3.5rem; color: #fff; }
 .luxury-separator { width: 100px; height: 3px; background: #3A9BDC; margin: 20px auto; box-shadow: 0 0 15px #3A9BDC; }
-
-/* --- التوسيط والمسافة بين الكروت --- */
 .luxury-contact-grid {
     display: flex;
-    justify-content: center; /* سنترة الكروت أفقياً */
-    gap: 80px; /* مسافة كبيرة وفخمة */
+    justify-content: center; 
+    gap: 80px; 
     padding: 0 30px;
     flex-wrap: wrap;
 }
@@ -918,8 +819,6 @@ body {
 
 .contact-glass-panel:hover { transform: translateY(-10px); border-color: #3A9BDC; }
 .contact-glass-panel h3 { font-family: 'Amiri', serif; font-size: 2.2rem; color: #3A9BDC; margin-bottom: 35px; text-align: right; }
-
-/* --- استايل الأزرار والبيانات --- */
 .contact-row-box {
     background: rgba(255,255,255,0.03);
     padding: 20px;
@@ -939,13 +838,9 @@ body {
 }
 .call-btn { background: #fff; color: #0d1b2a; }
 .wa-btn { background: #25D366; color: #fff; }
-
-/* الايميل */
 .email-only { display: flex; align-items: center; gap: 20px; }
 .email-only i { font-size: 1.5rem; color: #3A9BDC; }
 .email-stack a { display: block; color: #fff; text-decoration: none; font-size: 0.95rem; margin-bottom: 5px; }
-
-/* الفورم */
 .contact-form-luxury input, .contact-form-luxury select, .contact-form-luxury textarea {
     width: 100%; padding: 15px 20px; margin-bottom: 20px; border-radius: 15px;
     background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff;
@@ -955,15 +850,12 @@ body {
     width: 100%; padding: 18px; background: #25D366; color: #fff; border: none; border-radius: 15px;
     font-size: 1.1rem; font-weight: 900; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 10px;
 }
-
-/* الموبايل */
 @media (max-width: 992px) {
     .luxury-contact-grid { gap: 30px; }
     .contact-glass-panel { max-width: 100%; }
 }
-/* --- ستايل الفوتر الملكي --- */
 .main-footer {
-    background: #0a0e14; /* لون داكن جداً وفخم */
+    background: #0a0e14; 
     padding: 100px 5% 40px;
     color: #fff;
     border-top: 2px solid rgba(58, 155, 220, 0.1);
@@ -977,8 +869,6 @@ body {
     gap: 50px;
     margin-bottom: 80px;
 }
-
-/* العمود الأول */
 .footer-logo { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
 .footer-logo img { height: 60px; filter: drop-shadow(0 0 10px var(--p-blue)); }
 .footer-logo h2 { font-size: 2.2rem; color: #fff; }
@@ -994,8 +884,6 @@ body {
     border-radius: 50%; color: #fff; text-decoration: none; transition: 0.3s;
 }
 .social-icons a:hover { background: #3A9BDC; transform: translateY(-5px); }
-
-/* الأعمدة والروابط */
 .footer-col h3 {
     font-size: 1.8rem; color: #3A9BDC; margin-bottom: 30px; position: relative;
 }
@@ -1010,16 +898,12 @@ body {
     text-decoration: none; color: #ccc; transition: 0.3s; display: block;
 }
 .footer-links a:hover { color: #3A9BDC; transform: translateX(-10px); }
-
-/* بيانات التواصل */
 .footer-info { list-style: none; }
 .footer-info li {
     display: flex; align-items: center; gap: 15px; margin-bottom: 20px;
     color: #ccc; font-size: 0.95rem;
 }
 .footer-info i { color: #3A9BDC; font-size: 1.1rem; }
-
-/* الجزء السفلي */
 .footer-bottom {
     border-top: 1px solid rgba(255,255,255,0.05);
     padding-top: 40px;
@@ -1041,8 +925,6 @@ body {
     width: 0%; height: 1px; background: #3A9BDC; transition: 0.3s;
 }
 .gmt-link:hover::after { width: 100%; }
-
-/* تجاوب الموبايل */
 @media (max-width: 992px) {
     .footer-grid { grid-template-columns: 1fr 1fr; }
 }
@@ -1051,11 +933,10 @@ body {
     .footer-grid { grid-template-columns: 1fr; gap: 40px; }
     .main-footer { padding-top: 60px; }
 }
-/* --- ستايل شاشة الافتتاحية المطور --- */
 #loader-screen {
     position: fixed;
     inset: 0;
-    background: #0a0e14; /* نفس لون خلفية الموقع لضمان الانسيابية */
+    background: #0a0e14; 
     z-index: 10000;
     display: flex;
     justify-content: center;
@@ -1070,9 +951,8 @@ body {
 }
 
 .splash-logo-img {
-    width: 120px; /* يمكنك التحكم في حجم اللوجو من هنا */
+    width: 120px; 
     margin-bottom: 25px;
-    /* أنيميشن نبض خفيف ليعطي روحاً للوجو أثناء التحميل */
     animation: splashPulse 2s infinite ease-in-out;
     filter: drop-shadow(0 0 15px rgba(58, 155, 220, 0.4));
 }
@@ -1094,7 +974,7 @@ body {
 .progress-bar {
     width: 100%;
     height: 100%;
-    background: #3A9BDC; /* أزرق اللوجو */
+    background: #3A9BDC;
     position: absolute;
     left: -100%;
     animation: loadMove 2s infinite linear;
@@ -1103,15 +983,14 @@ body {
 @keyframes loadMove {
     to { left: 100%; }
 }
-/* --- تنسيق الأزرار العائمة --- */
 .floating-contact-container {
     position: fixed;
     bottom: 30px;
-    right: 30px; /* جهة اليسار لأن الموقع RTL لسهولة الاستخدام باليد */
+    right: 30px; 
     display: flex;
     flex-direction: column;
     gap: 15px;
-    z-index: 9999; /* لضمان ظهورها فوق كل شيء */
+    z-index: 9999; 
 }
 
 .float-action-btn {
@@ -1129,21 +1008,15 @@ body {
     position: relative;
     overflow: visible;
 }
-
-/* زر الواتساب */
 .whatsapp-float {
     background: linear-gradient(45deg, #25d366, #128c7e);
     animation: waPulse 2s infinite;
 }
-
-/* زر الاتصال */
 .call-float {
-    background: linear-gradient(45deg, #3A9BDC, #0d1b2a); /* ألوان اللوجو */
+    background: linear-gradient(45deg, #3A9BDC, #0d1b2a); 
     animation: callPulse 2s infinite;
-    animation-delay: 1s; /* تتابع النبض */
+    animation-delay: 1s; 
 }
-
-/* تسمية الزر تظهر عند المرور (Hover Label) */
 .btn-label {
     position: absolute;
     right: 75px;
@@ -1168,8 +1041,6 @@ body {
 .float-action-btn:hover {
     transform: scale(1.1) rotate(10deg);
 }
-
-/* --- أنيميشن النبض (Pulse) --- */
 @keyframes waPulse {
     0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
     70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
@@ -1181,8 +1052,6 @@ body {
     70% { box-shadow: 0 0 0 20px rgba(58, 155, 220, 0); }
     100% { box-shadow: 0 0 0 0 rgba(58, 155, 220, 0); }
 }
-
-/* تجاوب الموبايل */
 @media (max-width: 768px) {
     .floating-contact-container {
         bottom: 20px;
@@ -1193,11 +1062,9 @@ body {
         height: 50px;
         font-size: 1.2rem;
     }
-    .btn-label { display: none; } /* إخفاء الليبل في الموبايل لعدم الزحمة */
+    .btn-label { display: none; } 
 }
-/* --- تصغير الخطوط في الموبايل (Header & Hero) --- */
 @media (max-width: 768px) {
-    /* 1. الهيدر (الناف بار) */
     .main-name { 
         font-size: 1.1rem !important; 
     }
@@ -1212,17 +1079,15 @@ body {
         height: 65px !important; 
         padding: 0 15px !important; 
     }
-
-    /* 2. الهيرو (السكشن الرئيسي) */
     .hero-wrapper {
-        padding-top: 80px !important; /* تقليل المسافة العلوية */
+        padding-top: 80px !important; 
     }
     .glass-geometric-frame {
         padding: 30px 15px !important;
         width: 95% !important;
     }
     .hero-title { 
-        font-size: 1.8rem !important; /* تصغير العنوان الضخم */
+        font-size: 1.8rem !important; 
         margin-bottom: 10px !important;
     }
     .hero-subtitle { 
@@ -1230,16 +1095,16 @@ body {
         margin-bottom: 15px !important;
     }
     .hero-paragraph { 
-        font-size: 0.85rem !important; /* تصغير الوصف */
+        font-size: 0.85rem !important; 
         line-height: 1.6 !important;
         margin-bottom: 25px !important;
     }
     .pill-item { 
-        font-size: 0.75rem !important; /* تصغير الكبسولات */
+        font-size: 0.75rem !important; 
         padding: 5px 12px !important; 
     }
     .hero-actions {
-        flex-direction: column !important; /* ترتيب الأزرار تحت بعض */
+        flex-direction: column !important; 
         gap: 12px !important;
     }
     .btn-primary, .btn-outline {
@@ -1247,12 +1112,21 @@ body {
         padding: 12px !important;
         font-size: 0.95rem !important;
     }
-
-    /* 3. المنيو الهابطة (السايد منيو) */
     .m-link {
-        font-size: 1.5rem !important; /* تصغير روابط المنيو */
+        font-size: 1.5rem !important; 
     }
     .menu-card {
         padding: 30px 15px !important;
     }
+}
+.top-side-menu {
+    top: -150% !important; 
+    visibility: hidden !important;
+    opacity: 0 !important;
+    transition: all 0.6s cubic-bezier(0.8, 0, 0.2, 1) !important;
+}
+.top-side-menu.active {
+    top: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
