@@ -1373,3 +1373,76 @@ h3, .s-title-amiri, .blog-title-amiri, .amiri-card-title, .amiri-mag-title {
     .s-image-box { height: 180px; }
     .card-front { padding: 25px 20px 30px 20px; }
 }
+@media (max-width: 768px) {
+    .ultra-luxury-services {
+        padding: 60px 15px !important;
+    }
+
+    .services-3d-grid {
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+    }
+
+    .mega-card {
+        width: 100% !important;
+    }
+
+    .card-inner {
+        border-radius: 25px !important;
+    }
+
+    .s-image-box {
+        height: 160px !important;
+        border-radius: 25px 25px 0 0 !important;
+    }
+
+    .card-front {
+        padding: 20px 15px 25px 15px !important;
+    }
+
+    .s-title-amiri {
+        font-size: 1.3rem !important;
+        margin-bottom: 12px !important;
+    }
+
+    .s-detailed-text {
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+        min-height: auto !important;
+        margin-bottom: 15px !important;
+    }
+
+    .testimonials-modern {
+        padding: 60px 15px !important;
+    }
+
+    .testi-flex-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .opinion-card {
+        padding: 30px 20px !important;
+        border-radius: 25px !important;
+        max-width: 100% !important;
+    }
+
+    .opinion-msg {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 20px !important;
+    }
+
+    .client-name {
+        font-size: 1.1rem !important;
+        padding-top: 15px !important;
+    }
+
+    .section-title {
+        font-size: 1.8rem !important;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem !important;
+    }
+}
