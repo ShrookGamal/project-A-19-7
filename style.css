@@ -1178,10 +1178,198 @@ header.scrolled .site-logo, header.scrolled .main-logo {
 }
 @media (max-width: 768px) {
     .site-logo, .main-logo {
-        height: 48px !important; 
+        height: 60px !important; 
     }
 }
 .splash-logo-img {
     width: 160px !important; 
     max-width: 70% !important; 
+}
+.brand-box, .brand-container {
+    display: flex !important;
+    align-items: center !important;
+    gap: 150px !important;
+}
+
+.site-logo, .main-logo {
+    height: 30px !important;
+    width: auto !important;
+    transform: scale(4.5) !important;
+    transform-origin: right center !important;
+    position: relative !important;
+    z-index: 110 !important;
+}
+
+@media (max-width: 992px) {
+    .brand-box, .brand-container {
+        gap: 45px !important;
+    }
+    .site-logo, .main-logo {
+        transform: scale(1.8) !important;
+    }
+}
+.testimonials-modern {
+    padding: 120px 5%;
+    background: radial-gradient(circle at center, #162a41 0%, #0d1b2a 100%);
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+.testi-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.testi-top { text-align: center; margin-bottom: 70px; }
+.section-title { font-size: 3.5rem; font-weight: 900; color: #fff; margin-bottom: 15px; }
+.title-glow-line { width: 80px; height: 4px; background: #3A9BDC; margin: 0 auto 25px; box-shadow: 0 0 15px #3A9BDC; border-radius: 10px; }
+.section-subtitle { font-size: 1.2rem; color: #ccc; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.testi-flex-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.opinion-card {
+    flex: 1;
+    min-width: 320px;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    padding: 50px 40px;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUpPure 1s forwards ease;
+}
+.opinion-card:nth-child(1) { animation-delay: 0.2s; }
+.opinion-card:nth-child(2) { animation-delay: 0.4s; }
+.opinion-card:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes fadeInUpPure {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.opinion-card:hover {
+    transform: translateY(-20px) scale(1.03);
+    border-color: #3A9BDC;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.top-accent {
+    position: absolute; top: 0; right: 0; width: 100px; height: 100px;
+    background: radial-gradient(circle at top right, rgba(58, 155, 220, 0.2), transparent);
+    border-radius: 0 40px 0 100%;
+}
+
+.stars-row { color: #f1c40f; margin-bottom: 25px; font-size: 1rem; }
+.stars-row i { margin-left: 5px; filter: drop-shadow(0 0 5px rgba(241, 196, 15, 0.4)); }
+
+.opinion-msg {
+    font-size: 1.15rem; color: #eee; line-height: 1.9;
+    font-style: italic; margin-bottom: 30px; position: relative;
+}
+
+.client-name {
+    font-size: 1.3rem; color: #3A9BDC; font-weight: 900;
+    padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+@media (max-width: 992px) {
+    .section-title { font-size: 2.2rem; }
+    .opinion-card { max-width: 100%; }
+}
+h1, .hero-title, .main-title {
+    font-size: 2.8rem !important;
+}
+
+h2, .section-title, .amiri-title, .amiri-why-title, .amiri-contact-title, .amiri-section-title {
+    font-size: 2.2rem !important;
+}
+
+h3, .s-title-amiri, .blog-title-amiri, .amiri-card-title, .amiri-mag-title {
+    font-size: 1.6rem !important;
+}
+
+@media (max-width: 768px) {
+    h1, .hero-title, .main-title {
+        font-size: 1.8rem !important;
+    }
+    h2, .section-title, .amiri-title, .amiri-why-title, .amiri-contact-title {
+        font-size: 1.5rem !important;
+    }
+    h3, .s-title-amiri, .blog-title-amiri {
+        font-size: 1.3rem !important;
+    }
+}
+.main-name, .brand-name {
+    font-size: 1.2rem !important;
+}
+
+.sub-tagline, .brand-services, .brand-sub {
+    font-size: 0.65rem !important;
+}
+
+@media (max-width: 768px) {
+    .main-name, .brand-name {
+        font-size: 1rem !important;
+    }
+    .sub-tagline, .brand-services, .brand-sub {
+        font-size: 0.55rem !important;
+    }
+}
+.s-image-box {
+    width: 100%;
+    height: 250px; 
+    overflow: hidden;
+    position: relative;
+    border-radius: 40px 40px 0 0;
+}
+
+.s-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.mega-card:hover .s-image-box img {
+    transform: scale(1.15); 
+}
+.s-image-box::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.1));
+    z-index: 1;
+}
+
+.card-inner {
+    padding: 0 !important;
+    background: #fff;
+    border-radius: 50px;
+    border: 1px solid rgba(0,0,0,0.03);
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.04);
+}
+
+.card-front {
+    padding: 35px 40px 45px 40px; 
+}
+
+.s-title-amiri {
+    font-size: 1.8rem !important; 
+    margin-bottom: 20px !important;
+}
+@media (max-width: 768px) {
+    .s-image-box { height: 180px; }
+    .card-front { padding: 25px 20px 30px 20px; }
 }
